@@ -6,6 +6,7 @@ import { Search } from "../components/Search";
 import { Section } from "../components/Section";
 import { TrendingFoods } from "../components/TrendingFoods";
 import { Restaurants } from "../components/Restaurants";
+import { VerticalRestaurantList } from "../components/VerticalRestaurantList";
 
 export default function Index() {
   const statusBarHeight = Constants.statusBarHeight;
@@ -26,17 +27,25 @@ export default function Index() {
         title="Comidas em alta"
         label={"Veja mais"}
         size={"text-2xl"}
-        action={() => console.log("CLICOU NO VEJA MAIS")}
+        action={() => console.log("CLICOU EM COMIDAS EM ALTA")}
       />
       <TrendingFoods />
 
       <Section
         title="Famosos no DevFood"
-        label={"Veja todas"}
+        label={"Veja todos"}
         size={"text-xl"}
-        action={() => console.log("CLICOU NO VEJA TODAS")}
+        action={() => console.log("CLICOU EM FAMOSOS NO DEVFOOD")}
       />
       <Restaurants />
+
+      <Section
+        title="Restaurantes"
+        label={"Veja todos"}
+        size={"text-xl"}
+        action={() => console.log("CLICOU EM RESTAURANTES")}
+      />
+      <VerticalRestaurantList />
     </ScrollView>
   );
 }
