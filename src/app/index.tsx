@@ -5,6 +5,7 @@ import { Header } from "../components/Header";
 import { Search } from "../components/Search";
 import { Section } from "../components/Section";
 import { TrendingFoods } from "../components/TrendingFoods";
+import { Restaurants } from "../components/Restaurants";
 
 export default function Index() {
   const statusBarHeight = Constants.statusBarHeight;
@@ -17,9 +18,7 @@ export default function Index() {
     >
       <View style={{ marginTop: statusBarHeight + 8 }} className="w-full px-4">
         <Header />
-
         <Banner />
-
         <Search />
       </View>
 
@@ -29,7 +28,6 @@ export default function Index() {
         size={"text-2xl"}
         action={() => console.log("CLICOU NO VEJA MAIS")}
       />
-
       <TrendingFoods />
 
       <Section
@@ -38,6 +36,7 @@ export default function Index() {
         size={"text-xl"}
         action={() => console.log("CLICOU NO VEJA TODAS")}
       />
+      <Restaurants />
     </ScrollView>
   );
 }
