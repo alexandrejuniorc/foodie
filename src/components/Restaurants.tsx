@@ -1,6 +1,6 @@
 import { FlatList } from "react-native";
+import { useMockRestaurants } from "../hooks";
 import { HorizontalCardRestaurant } from "./HorizontalCardRestaurant";
-import { useMockRestaurants } from "../hooks/use-mock-restaurants";
 
 export function Restaurants() {
   const restaurants = useMockRestaurants();

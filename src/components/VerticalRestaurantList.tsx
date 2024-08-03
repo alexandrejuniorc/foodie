@@ -1,6 +1,6 @@
 import { View } from "react-native";
+import { useMockRestaurants } from "../hooks";
 import { VerticalRestaurantListItem } from "./VerticalRestaurantListItem";
-import { useMockRestaurants } from "../hooks/use-mock-restaurants";
 
 export function VerticalRestaurantList() {
   const restaurants = useMockRestaurants();

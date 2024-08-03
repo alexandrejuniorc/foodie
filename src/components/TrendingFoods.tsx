@@ -1,6 +1,6 @@
 import { FlatList } from "react-native";
+import { useMockFoods } from "../hooks";
 import { HorizontalCardFood } from "./HorizontalCardFood";
-import { useMockFoods } from "../hooks/use-mock-foods";
 
 export function TrendingFoods() {
   const foods = useMockFoods();
