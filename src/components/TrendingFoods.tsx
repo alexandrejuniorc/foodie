@@ -1,20 +1,9 @@
-import { useEffect, useState } from "react";
 import { FlatList } from "react-native";
 import { HorizontalCardFood } from "./HorizontalCardFood";
-import { Food } from "../entities/food";
+import { useMockFoods } from "../hooks/use-mock-foods";
 
 export function TrendingFoods() {
-  const [foods, setFoods] = useState<Food[]>([]);
-
-  useEffect(() => {
-    async function getFoods() {
-      const response = await fetch("http://192.168.0.105:3000/foods");
-      const data = await response.json();
-      setFoods(data);
-    }
-
-    getFoods();
-  }, [foods]);
+  const foods = useMockFoods();
 
   return (
     <FlatList

@@ -1,20 +1,9 @@
-import { useEffect, useState } from "react";
-import { FlatList, Text, View } from "react-native";
-import { Restaurant } from "../entities/restaurant";
+import { FlatList } from "react-native";
 import { HorizontalCardRestaurant } from "./HorizontalCardRestaurant";
+import { useMockRestaurants } from "../hooks/use-mock-restaurants";
 
 export function Restaurants() {
-  const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
-
-  useEffect(() => {
-    async function getRestaurants() {
-      const response = await fetch("http://192.168.0.105:3000/restaurants");
-      const data = await response.json();
-      setRestaurants(data);
-    }
-
-    getRestaurants();
-  }, [restaurants]);
+  const restaurants = useMockRestaurants();
 
   return (
     <FlatList
